@@ -1,53 +1,179 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HandballBox</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: #0b1220;
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
     }
 
-    h1 {
-      font-size: 3rem;
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #111a2e;
+      border-bottom: 1px solid #1f2a44;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin: 50px 20px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
-    p {
+    .hero p {
       color: #94a3b8;
-      font-size: 1.2rem;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #111a2e;
+      border: 1px solid #1f2a44;
+      border-radius: 12px;
+    }
+
+    .about h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 30px;
     }
 
     .card {
-      margin-top: 20px;
-      padding: 20px;
-      background: #1e293b;
-      border-radius: 12px;
-      width: 300px;
+      background: #111a2e;
+      border: 1px solid #1f2a44;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .card a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card p {
+      color: #94a3b8;
+      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
-  <h1>🤾 HandballBox</h1>
-  <p>The global handball database is coming.</p>
 
-  <div class="card">
-    <p>Players • Clubs • Leagues • Matches</p>
-    <p style="font-size: 0.9rem; color:#64748b;">
-      First version deployed on Cloudflare Pages
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">🤾 HandballBox</div>
+
+    <div class="nav-links">
+      <a href="players.html">Players</a>
+      <a href="clubs.html">Clubs</a>
+      <a href="leagues.html">Leagues</a>
+      <a href="matches.html">Matches</a>
+      <a href="transfers.html">Transfers</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>HandballBox</h1>
+    <p>The global handball database project</p>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="about">
+    <h2>About HandballBox</h2>
+    <p>
+      HandballBox is a developing global database for handball players, clubs, leagues,
+      matches, and transfers. The goal is to create a complete, structured, and searchable
+      system similar to Volleybox, but focused entirely on handball.
+    </p>
+    <p>
+      This project is currently in early development. Data structure, pages, and features
+      are being built step by step.
     </p>
   </div>
+
+  <!-- MENU GRID -->
+  <div class="grid">
+
+    <div class="card">
+      <a href="players.html">Players</a>
+      <p>Browse player profiles and careers</p>
+    </div>
+
+    <div class="card">
+      <a href="clubs.html">Clubs</a>
+      <p>Teams and rosters worldwide</p>
+    </div>
+
+    <div class="card">
+      <a href="leagues.html">Leagues</a>
+      <p>Domestic and international leagues</p>
+    </div>
+
+    <div class="card">
+      <a href="matches.html">Matches</a>
+      <p>Results and statistics</p>
+    </div>
+
+    <div class="card">
+      <a href="transfers.html">Transfers</a>
+      <p>Player movement history</p>
+    </div>
+
+  </div>
+
 </body>
 </html>
